@@ -2,6 +2,9 @@ const uuid = require("uuid4")
 
 class Sensor {
   constructor(manager, sid) {
+    /**
+     * @type {import('./Manager')}
+     */
     this._man = manager
     this.sid = sid
     this._invId = null

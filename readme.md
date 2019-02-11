@@ -22,6 +22,9 @@ The Spout allows the runtime registration of an Output from LimaCharlie.io throu
 ### Sensor
 Simple interaction with the sensors. Task, tag, untag, list tags.
 
+### Rule
+TODO - Allow creation of DR Rules
+
 ## Examples
 This is still in early development. For latest examples on how to use the various interfaces, see the
 [tests](https://github.com/refractionPOINT/limacharlie-js/blob/master/test/test.js).
