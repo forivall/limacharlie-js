@@ -105,14 +105,18 @@ class Sensor {
   }
 
   async getInfo() {
-    const data = await this._man._apiCall(this.sid, "GET")
-    this._info = data.info
-    return data.info
+    return (await this.getData()).info
   }
 
   async isOnline() {
-    const data = await this._man._apiCall(this.sid, "GET")
+    const data = await this.getData()
     return (data && data.online && !("error" in data.online)) ? true : false
+  }
+
+  async getData() {
+    const data = await this._man._apiCall(this.sid, "GET")
+    this._info = data.info
+    return data
   }
 
   async getHistoricEvents(params) {
